@@ -1,4 +1,4 @@
-import * as ActionTypes from '../actions/actionTypes';
+import * as ActionTypes from './actionTypes';
 import * as lessonApi from '../../api/lessonApi';
 
 export function loadLessons() {
@@ -18,7 +18,7 @@ export function loadLessonsSuccess(lessons) {
 
 export function loadAllUsers() {
   return function (dispatch) {
-    return lessonApi.gettAllUsers()
+    return lessonApi.getAllUsers()
       .then((usersFromApi) => dispatch(loadAllUsersSuccess(usersFromApi)))
       .catch((error) => console.log(error))
   }

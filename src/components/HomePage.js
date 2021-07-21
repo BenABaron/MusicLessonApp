@@ -3,8 +3,10 @@ import React, { useEffect } from 'react';
 function HomePage(props) {
 
   useEffect(() => {
-    console.log(props.users.length)
-  })
+    if (props.users.length === 0) {
+      props.loadAllUsers();
+    }
+  });
 
   return (
     <div>

@@ -6,8 +6,8 @@ import LoginPage from './containers/LoginPage';
 const Router = () => {
   return (
     <Switch>
-      <Route path='/home' component={HomePage}/>
-      <Route path='/login' component={LoginPage}/>
+      <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage}/>
+      <Route path={process.env.PUBLIC_URL + '/login'} component={LoginPage}/>
     </Switch>
   )
 }

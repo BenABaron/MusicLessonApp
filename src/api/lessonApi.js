@@ -7,5 +7,5 @@ export function getLessons() {
 };
 
 export function getAllUsers() {
-  return fetch(`${lessonUrl}/getAllUsers`, {mode: 'no-cors'}).then(handleResponse).catch(handleError);
+  return fetch(`${lessonUrl}/getAllUsers`).then(handleResponse).catch(handleError);
 };

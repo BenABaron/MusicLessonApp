@@ -1,4 +1,4 @@
 export default {
   lessons: [],
-  users: []
+  user: {}
 };

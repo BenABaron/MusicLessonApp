@@ -4,7 +4,6 @@ import { loadLessons, loadAllUsers } from '../redux/actions/actions';
 
 const mapStateToProps = (state) => {
   return {
-    lessons: state.lessons,
     users: state.users
   };
 }

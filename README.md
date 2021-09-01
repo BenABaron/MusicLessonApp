@@ -9,6 +9,7 @@ Students and Teachers. Anyone will be able to create a student account.
 2. Allow students/teacher to log in
 3. Allow students to request lessons from the teacher
 4. Allow the teacher to accept lesson requests
+5. See all lessons in DB
 
 # Future enhancements
 1. Allow the teacher to get their lessons for the week

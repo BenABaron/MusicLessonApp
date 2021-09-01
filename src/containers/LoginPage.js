@@ -1,11 +1,9 @@
 import { connect } from 'react-redux';
 import LoginPage from '../components/LoginPage';
+import { loginUser } from '../redux/actions/lessonActions';
 
-const mapStateToProps = (state) => {
-  return {
-    lessons: state.lessons,
-    users: state.users
-  };
-}
+const dispatchStateToProps = {
+  loginUser
+};
 
-export default connect(mapStateToProps)(LoginPage);
+export default connect(null, dispatchStateToProps)(LoginPage);

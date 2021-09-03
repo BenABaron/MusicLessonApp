@@ -20,6 +20,5 @@ export function createUser(newUser) {
     body: JSON.stringify(newUser)
   })
     .then(handleResponse)
-    .then(storeTokenOnLocalStorage)
     .catch(handleError);
 }

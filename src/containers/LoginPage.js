@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import LoginPage from '../components/LoginPage';
-import { loginUser } from '../redux/actions/lessonActions';
+import { loginUser } from '../redux/actions/userActions';
 
 const dispatchStateToProps = {
   loginUser

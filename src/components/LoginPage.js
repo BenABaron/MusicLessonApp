@@ -1,39 +1,43 @@
 import { Button, Container, TextField } from '@material-ui/core';
-import React from 'react';
-import { Component } from 'react';
+import React, { useState } from 'react';
 
-class LoginPage extends Component {
+function LoginPage(props) {
 
-  constructor(props) {
-    super(props);
+  const [user, setUser] = useState({email: '', password: ''});
+  const [error, setError] = useState('');
 
-    this.state = {
-      username: '',
-      password: ''
-    }
+  function handleInputChanges(event) {
+    const { name, value } = event.target;
+
+    setUser((previoususer) => ({
+      ...previoususer,
+      [name]: value
+    }));
   }
 
-  handleTextChange = (e) => {
-    const state = { ...this.state }
-    state[e.target.name] = e.target.value
-    this.setState(state)
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    props
+      .loginUser(user)
+      .then(() => props.history.push(process.env.PUBLIC_URL + '/'))
+      .catch((error) => setError(error));
   }
-
-  render() {
-    return (
-      <Container maxWidth="sm">
-      <form onSubmit={() => this.props.LoginUser()}>
+  
+  return (
+    <Container maxWidth="sm">
+      <div>{error}</div>
+      <form onSubmit={handleFormSubmit}>
         <TextField 
         required
-        onChange = {this.handleTextChange}
-        value={this.state.username}
-        name="username"
-        label="Username"
-        type="text" />
+        onChange = {handleInputChanges}
+        value={user.email}
+        name="email"
+        label="Email"
+        type="email" />
         <TextField 
         required
-        onChange = {this.handleTextChange}
-        value={this.state.password}
+        onChange = {handleInputChanges}
+        value={user.password}
         name="password"
         label="Password"
         type="password" />
@@ -46,7 +50,7 @@ class LoginPage extends Component {
       </form>
     </Container>
   )
-}
+
 }
 
 export default LoginPage;

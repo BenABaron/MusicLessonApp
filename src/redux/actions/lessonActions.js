@@ -15,18 +15,3 @@ export function loadLessonsSuccess(lessons) {
     lessons
   }
 };
-
-export function loadAllUsers() {
-  return function (dispatch) {
-    return lessonApi.getAllUsers()
-      .then((usersFromApi) => dispatch(loadAllUsersSuccess(usersFromApi)))
-      .catch((error) => console.log(error))
-  }
-};
-
-export function loadAllUsersSuccess(users) {
-  return {
-    type: ActionTypes.LOAD_ALL_USERS_SUCCESS,
-    users
-  }
-};

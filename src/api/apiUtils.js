@@ -13,11 +13,11 @@ export function handleError(error) {
 }
 
 export function storeTokenOnLocalStorage(response) {
-  localStorage.setItem("token", response.token);
+  console.log(response)
 
-  response.name = "Ben Baron";
+  localStorage.setItem("token", response);
 
-  delete response.token;
+  // response.name = "Ben Baron";
 
   return response;
 }

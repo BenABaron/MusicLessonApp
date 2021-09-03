@@ -1,16 +1,9 @@
 import { connect } from 'react-redux';
 import HomePage from '../components/HomePage';
-import { loadLessons, loadAllUsers } from '../redux/actions/actions';
-
-const mapStateToProps = (state) => {
-  return {
-    users: state.users
-  };
-}
+import { loadLessons, loadAllUsers } from '../redux/actions/lessonActions';
 
 const dispatchStateToProps = {
   loadLessons,
-  loadAllUsers
 };
 
-export default connect(mapStateToProps, dispatchStateToProps)(HomePage);
+export default connect(null, dispatchStateToProps)(HomePage);

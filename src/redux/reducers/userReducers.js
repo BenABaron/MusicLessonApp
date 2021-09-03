@@ -1,11 +1,9 @@
 import * as ActionTypes from '../actions/actionTypes';
 
-export default function userReducer(state = [], action) {
+export default function usersReducer(state = {}, action) {
   switch (action.type) {
-    case ActionTypes.LOAD_ALL_USERS_SUCCESS:
-      return action.users;
     case ActionTypes.LOGIN_USER_SUCCESS:
-      return action.token;
+      return { ...state, ...action.user}
     default:
       return state;
   }

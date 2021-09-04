@@ -15,3 +15,19 @@ export function loadLessonsSuccess(lessons) {
     lessons
   }
 };
+
+export function requestLesson(lessonRequest) {
+  return function (dispatch) {
+    return lessonApi
+      .requestLesson(lessonRequest)
+      .then((responseFromApi) => dispatch(requestLessonSuccess(responseFromApi)))
+      .catch((error) => console.log(error))
+  }
+}
+
+export function requestLessonSuccess(lessons) {
+  return {
+    type: ActionTypes.REQUEST_LESSON_SUCCESS,
+    lessons
+  }
+};

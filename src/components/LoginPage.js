@@ -17,6 +17,7 @@ function LoginPage(props) {
 
   function handleFormSubmit(event) {
     event.preventDefault();
+    document.cookie = 'loggedIn = true; max-age=300'
     props
       .loginUser(user)
       .then(() => props.history.push(process.env.PUBLIC_URL + '/'))

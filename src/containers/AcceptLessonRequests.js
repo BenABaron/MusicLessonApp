@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import LessonSchedulePage from '../components/LessonSchedulePage';
+import AcceptLessonRequests from '../components/AcceptLessonRequests';
 import { loadLessons } from '../redux/actions/lessonActions';
 
 const dispatchStateToProps = {
   loadLessons,
 };
 
-export default connect(null, dispatchStateToProps)(LessonSchedulePage);
+export default connect(null, dispatchStateToProps)(AcceptLessonRequests);

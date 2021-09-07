@@ -1,5 +1,4 @@
 import { Container, FormControlLabel, makeStyles, TextField, Checkbox, FormControl, InputLabel, Select, MenuItem, Button } from '@material-ui/core';
-import { FastfoodOutlined, SentimentSatisfied } from '@material-ui/icons';
 import React, { useEffect, useState } from 'react';
 const jwt = require('jsonwebtoken');
 
@@ -77,7 +76,7 @@ function LessonRequestPage(props) {
     props
       .requestLesson(requestInfo)
       .then(() => props.history.push(process.env.PUBLIC_URL + '/'))
-      .catch((error) => setError(error));
+      .catch((error) => setError(error)) 
   }
 
   return (
@@ -152,7 +151,7 @@ function LessonRequestPage(props) {
           name='separation_count'
           onChange={handleInputChanges}
         >
-          <MenuItem value={null}>None</MenuItem>
+          <MenuItem value={undefined}>None</MenuItem>
           <MenuItem value={0}>Every</MenuItem>
           <MenuItem value={1}>Every Other</MenuItem>
         </Select>

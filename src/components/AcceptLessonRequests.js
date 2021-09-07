@@ -2,12 +2,12 @@ import { Button, Container, Typography } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function LessonSchedulePage(props) {
+function AcceptLessonRequests(props) {
   return (
     <Container>
-      <Typography variant="h1">Welcome to the Lesson Schedule!</Typography>
+      <Typography variant="h1">Welcome to the Accept Lessons!</Typography>
     </Container>
   )
 }
 
-export default LessonSchedulePage;
+export default AcceptLessonRequests;

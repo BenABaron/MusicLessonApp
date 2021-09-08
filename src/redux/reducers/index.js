@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import lessons from './lessonReducer';
+import { lessons, lessonRequests } from './lessonReducer';
 import user from './userReducers';
 
-export default combineReducers({ lessons, user })
+export default combineReducers({ lessons, lessonRequests, user })

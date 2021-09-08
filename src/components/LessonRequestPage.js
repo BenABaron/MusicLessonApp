@@ -22,7 +22,7 @@ function LessonRequestPage(props) {
   useEffect(() => {
     if (requestInfo.student_id === 0) {
       let userId = decodeJwt();
-      setRequestInfo({ ...requestInfo, ['student_id']: userId});
+      setRequestInfo({ ...requestInfo, 'student_id': userId});
     };
   })
 
@@ -56,9 +56,15 @@ function LessonRequestPage(props) {
     }));
   }
 
+  function handleInputChangesDate(event) {
+    const { name, value } = event.target;
+
+    setRequestInfo({ ...requestInfo, [name]: value, 'end_date': value})
+  }
+
   function handleCheckboxChange(event) {
     setRequestInfo({ ...requestInfo, [event.target.name]: event.target.checked });
-    setDisabled({ ...disabled, ['is_disabled']: !event.target.checked});
+    setDisabled({ ...disabled, 'is_disabled': !event.target.checked});
   }
 
   function decodeJwt() {
@@ -92,7 +98,7 @@ function LessonRequestPage(props) {
       type='text' />
       <TextField
       required
-      onChange={handleInputChanges}
+      onChange={handleInputChangesDate}
       value={requestInfo.start_date}
       name='start_date'
       label='Date'

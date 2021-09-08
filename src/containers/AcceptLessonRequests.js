@@ -1,9 +1,16 @@
 import { connect } from 'react-redux';
 import AcceptLessonRequests from '../components/AcceptLessonRequests';
-import { loadLessons } from '../redux/actions/lessonActions';
+import { getLessonRequests, acceptLessonRequest } from '../redux/actions/lessonActions';
+
+function mapStateToProps(state) {
+  return {
+    lessonRequests: state.lessonRequests
+  };
+}
 
 const dispatchStateToProps = {
-  loadLessons,
+  getLessonRequests,
+  acceptLessonRequest
 };
 
-export default connect(null, dispatchStateToProps)(AcceptLessonRequests);
+export default connect(mapStateToProps, dispatchStateToProps)(AcceptLessonRequests);

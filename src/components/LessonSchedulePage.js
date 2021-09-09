@@ -34,10 +34,8 @@ function LessonSchedulePage(props) {
   const classes = useStyles();
 
   useEffect(() => {
-    if (props.lessons.length === 0) {
       props.loadLessons();
-    }
-  });
+  }, [props.lessons]);
 
   function formatDate(date) {
     let date1 = new Date(date);

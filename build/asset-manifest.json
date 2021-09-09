@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/MusicLessonApp/static/css/main.a617e044.chunk.css",
-    "main.js": "/MusicLessonApp/static/js/main.6de54f4e.chunk.js",
-    "main.js.map": "/MusicLessonApp/static/js/main.6de54f4e.chunk.js.map",
-    "runtime-main.js": "/MusicLessonApp/static/js/runtime-main.74871016.js",
-    "runtime-main.js.map": "/MusicLessonApp/static/js/runtime-main.74871016.js.map",
-    "static/js/2.3aed989a.chunk.js": "/MusicLessonApp/static/js/2.3aed989a.chunk.js",
-    "static/js/2.3aed989a.chunk.js.map": "/MusicLessonApp/static/js/2.3aed989a.chunk.js.map",
-    "static/js/3.63e017b3.chunk.js": "/MusicLessonApp/static/js/3.63e017b3.chunk.js",
-    "static/js/3.63e017b3.chunk.js.map": "/MusicLessonApp/static/js/3.63e017b3.chunk.js.map",
+    "main.js": "/MusicLessonApp/static/js/main.1a165741.chunk.js",
+    "main.js.map": "/MusicLessonApp/static/js/main.1a165741.chunk.js.map",
+    "runtime-main.js": "/MusicLessonApp/static/js/runtime-main.d64398ea.js",
+    "runtime-main.js.map": "/MusicLessonApp/static/js/runtime-main.d64398ea.js.map",
+    "static/js/2.7b11db6f.chunk.js": "/MusicLessonApp/static/js/2.7b11db6f.chunk.js",
+    "static/js/2.7b11db6f.chunk.js.map": "/MusicLessonApp/static/js/2.7b11db6f.chunk.js.map",
+    "static/js/3.437f6f41.chunk.js": "/MusicLessonApp/static/js/3.437f6f41.chunk.js",
+    "static/js/3.437f6f41.chunk.js.map": "/MusicLessonApp/static/js/3.437f6f41.chunk.js.map",
     "index.html": "/MusicLessonApp/index.html",
     "static/css/main.a617e044.chunk.css.map": "/MusicLessonApp/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.3aed989a.chunk.js.LICENSE.txt": "/MusicLessonApp/static/js/2.3aed989a.chunk.js.LICENSE.txt"
+    "static/js/2.7b11db6f.chunk.js.LICENSE.txt": "/MusicLessonApp/static/js/2.7b11db6f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.74871016.js",
-    "static/js/2.3aed989a.chunk.js",
+    "static/js/runtime-main.d64398ea.js",
+    "static/js/2.7b11db6f.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.6de54f4e.chunk.js"
+    "static/js/main.1a165741.chunk.js"
   ]
 }

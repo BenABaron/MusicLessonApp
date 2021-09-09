@@ -1,4 +1,4 @@
-import { Container, FormControlLabel, makeStyles, TextField, Checkbox, FormControl, InputLabel, Select, MenuItem, Button } from '@material-ui/core';
+import { Container, FormControlLabel, makeStyles, TextField, Checkbox, FormControl, InputLabel, Select, MenuItem, Button, Typography } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 const jwt = require('jsonwebtoken');
 
@@ -8,11 +8,21 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     flexWrap: 'wrap',
   },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: 200,
+  form: {
+    alignSelf: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
   },
+  textField: {
+    width: 300,
+    marginBottom: '7pt',
+    alignSelf: 'center'
+  },
+  child: {
+    marginTop: '30pt',
+    alignSelf: 'center'
+  }
 }))
 
 function LessonRequestPage(props) {
@@ -86,16 +96,17 @@ function LessonRequestPage(props) {
   }
 
   return (
-    <Container>
-      <h1>Lesson Request Page</h1>
-      <form className={classes.container} onSubmit={handleFormSubmit}>
+    <Container className={classes.container}>
+      <Typography variant='h2' className={classes.child}>Lesson Request Form</Typography>
+      <form onSubmit={handleFormSubmit} className={classes.form}>
       <TextField 
       required
       onChange={handleInputChanges}
       value={requestInfo.title}
       name='title'
       label='Title'
-      type='text' />
+      type='text'
+      className={classes.textField} />
       <TextField
       required
       onChange={handleInputChangesDate}
@@ -156,6 +167,7 @@ function LessonRequestPage(props) {
           value={requestInfo.separation_count}
           name='separation_count'
           onChange={handleInputChanges}
+          className={classes.textField}
         >
           <MenuItem value={undefined}>None</MenuItem>
           <MenuItem value={0}>Every</MenuItem>
@@ -170,6 +182,7 @@ function LessonRequestPage(props) {
           value={requestInfo.recurring_type_id}
           name='recurring_type_id'
           onChange={handleInputChanges}
+          className={classes.textField}
         >
           <MenuItem value={null}>None</MenuItem>
           <MenuItem value={2}>Week</MenuItem>
@@ -190,7 +203,8 @@ function LessonRequestPage(props) {
         type="submit"
         className="request-button"
         variant="contained"
-        color="primary">Request Lesson</Button>
+        color="primary"
+        >Request Lesson</Button>
       </form>
     </Container>
   )

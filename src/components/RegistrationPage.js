@@ -1,7 +1,21 @@
 import React, { useState } from 'react';
-import { Button, Container, TextField } from '@material-ui/core';
+import { Button, Container, makeStyles, TextField } from '@material-ui/core';
+
+const useStyles = makeStyles({
+  root: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  child: {
+    marginBottom: '7pt',
+    alignSelf: 'center',
+    width: '300pt'
+  }
+})
 
 function RegistrationPage(props) {
+
+  const classes = useStyles();
 
   const [newUser, setNewUser] = useState({email: '', password: '', confirm_password: '', first_name: '', last_name: ''});
   const [error, setError] = useState('');
@@ -26,47 +40,52 @@ function RegistrationPage(props) {
   return (
     <Container maxWidth="sm">
       <div>{error}</div>
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit} className={classes.root}>
         <TextField 
         required
         onChange = {handleInputChanges}
         value={newUser.first_name}
         name="first_name"
         label="First_Name"
-        type="text" />
+        type="text" 
+        className={classes.child}/>
         <TextField 
         required
         onChange = {handleInputChanges}
         value={newUser.last_name}
         name="last_name"
         label="Last_Name"
-        type="text" />
+        type="text" 
+        className={classes.child}/>
         <TextField 
         required
         onChange = {handleInputChanges}
         value={newUser.email}
         name="email"
         label="Email"
-        type="email" />
+        type="email"
+        className={classes.child} />
         <TextField 
         required
         onChange = {handleInputChanges}
         value={newUser.password}
         name="password"
         label="Password"
-        type="password" />
+        type="password"
+        className={classes.child} />
         <TextField 
         required
         onChange = {handleInputChanges}
         value={newUser.confirm_password}
         name="confirm_password"
         label="Confirm_Password"
-        type="password" />
+        type="password"
+        className={classes.child} />
         <Button
           type="submit"
-          className="login-button"
           variant="contained"
-          color="primary">Register
+          color="primary"
+          className={classes.child}>Register
         </Button>
       </form>
     </Container>

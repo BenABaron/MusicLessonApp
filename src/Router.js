@@ -13,22 +13,43 @@ const jwt = require('jsonwebtoken');
 
 const checkAuth = () => {
   const cookies = cookie.parse(document.cookie);
-  return cookies['loggedIn'] ? true : false
+  if (cookies['loggedIn']) {
+
+    if (localStorage.getItem('token')) {
+      const token = localStorage.getItem('token')
+  
+      const decoded = jwt.verify(token, 'superSecretLessonApp');
+  
+      let role = decoded.role;
+  
+      if (role === 'student') {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  } else {
+    return false;
+  }
 }
 
 const checkAuthTeacher = () => {
   const cookies = cookie.parse(document.cookie);
   if (cookies['loggedIn']) {
-    const token = localStorage.getItem('token')
 
-    const decoded = jwt.verify(token, 'superSecretLessonApp');
+    if (localStorage.getItem('token')) {
 
-    let role = decoded.role;
-
-    if (role === 'teacher') {
-      return true;
-    } else {
-      return false;
+      const token = localStorage.getItem('token')
+      
+      const decoded = jwt.verify(token, 'superSecretLessonApp');
+      
+      let role = decoded.role;
+      
+      if (role === 'teacher') {
+        return true;
+      } else {
+        return false;
+      }
     }
   } else {
     return false;

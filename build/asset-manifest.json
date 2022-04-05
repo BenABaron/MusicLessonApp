@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/MusicLessonApp/static/css/main.a617e044.chunk.css",
+    "main.js": "/MusicLessonApp/static/js/main.baa3e241.chunk.js",
+    "main.js.map": "/MusicLessonApp/static/js/main.baa3e241.chunk.js.map",
+    "runtime-main.js": "/MusicLessonApp/static/js/runtime-main.d64398ea.js",
+    "runtime-main.js.map": "/MusicLessonApp/static/js/runtime-main.d64398ea.js.map",
+    "static/js/2.7b11db6f.chunk.js": "/MusicLessonApp/static/js/2.7b11db6f.chunk.js",
+    "static/js/2.7b11db6f.chunk.js.map": "/MusicLessonApp/static/js/2.7b11db6f.chunk.js.map",
+    "static/js/3.437f6f41.chunk.js": "/MusicLessonApp/static/js/3.437f6f41.chunk.js",
+    "static/js/3.437f6f41.chunk.js.map": "/MusicLessonApp/static/js/3.437f6f41.chunk.js.map",
+    "index.html": "/MusicLessonApp/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/MusicLessonApp/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.7b11db6f.chunk.js.LICENSE.txt": "/MusicLessonApp/static/js/2.7b11db6f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d64398ea.js",
+    "static/js/2.7b11db6f.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.baa3e241.chunk.js"
+  ]
+}
